@@ -82,10 +82,6 @@ const insertData = (title) => {
     `; 
 }
 
-const removeActiveClasses = () => {
-    document.querySelector('.nav__btn.active').classList.remove('active');
-}; 
-
 insertNav(); 
 insertData(data[0].title);
 
@@ -98,7 +94,7 @@ navElement
 
             insertData(catTitle);
             menu.classList.remove('mobile');
-            removeActiveClasses();    
+            document.querySelector('.nav__btn.active').classList.remove('active');    
             button.classList.add('active');
         }
     });
